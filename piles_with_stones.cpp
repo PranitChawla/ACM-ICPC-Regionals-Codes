@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n;
+	cin>>n;
+	int a[n];
+	int b[n];
+	for (int i=0;i<n;i++)
+		cin>>a[i];
+	for (int i=0;i<n;i++)
+		cin>>b[i];
+	int count_less=0;
+	int count_more=0;
+	for (int i=0;i<n;i++)
+	{
+		if (b[i]<a[i])
+			{
+				count_less+=(a[i]-b[i]);
+			}
+		else
+		{
+			count_more+=(b[i]-a[i]);
+		}
+	}
+	if (count_more<=count_less)
+		cout<<"Yes";
+	else
+		cout<<"No";
+}
